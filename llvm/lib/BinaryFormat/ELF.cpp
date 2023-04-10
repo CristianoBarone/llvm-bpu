@@ -46,6 +46,7 @@ uint16_t ELF::convertArchNameToEMachine(StringRef Arch) {
       .Case("sparcv9", EM_SPARCV9)
       .Case("tricore", EM_TRICORE)
       .Case("arc", EM_ARC)
+	  .Case("bpu", EM_BPU)
       .Case("h8_300", EM_H8_300)
       .Case("h8_300h", EM_H8_300H)
       .Case("h8s", EM_H8S)
@@ -337,6 +338,8 @@ StringRef ELF::convertEMachineToArchName(uint16_t EMachine) {
     return "prism";
   case EM_AVR:
     return "avr";
+  case EM_BPU:
+    return "bpu";
   case EM_FR30:
     return "fr30";
   case EM_D10V:

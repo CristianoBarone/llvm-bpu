@@ -1238,6 +1238,8 @@ StringRef ELFObjectFile<ELFT>::getFileFormatName() const {
       return "elf64-amdgpu";
     case ELF::EM_BPF:
       return "elf64-bpf";
+	case ELF::EM_BPU:
+	  return "elf64-bpu";
     case ELF::EM_VE:
       return "elf64-ve";
     case ELF::EM_LOONGARCH:
@@ -1267,6 +1269,8 @@ template <class ELFT> Triple::ArchType ELFObjectFile<ELFT>::getArch() const {
     return Triple::arm;
   case ELF::EM_AVR:
     return Triple::avr;
+  case ELF::EM_BPU:
+    return Triple::bpu;
   case ELF::EM_HEXAGON:
     return Triple::hexagon;
   case ELF::EM_LANAI:

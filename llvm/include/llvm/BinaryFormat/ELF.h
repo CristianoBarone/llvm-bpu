@@ -314,6 +314,7 @@ enum {
   EM_NORC = 218,          // Nanoradio Optimized RISC
   EM_CSR_KALIMBA = 219,   // CSR Kalimba architecture family
   EM_AMDGPU = 224,        // AMD GPU architecture
+  EM_BPU = 234,
   EM_RISCV = 243,         // RISC-V
   EM_LANAI = 244,         // Lanai 32-bit processor
   EM_BPF = 247,           // Linux kernel bpf virtual machine
@@ -500,6 +501,11 @@ enum : unsigned {
 // ELF Relocation types for AVR
 enum {
 #include "ELFRelocs/AVR.def"
+};
+
+// BPU relocations.
+enum {
+#include "ELFRelocs/BPU.def"
 };
 
 // Mips Specific e_flags
